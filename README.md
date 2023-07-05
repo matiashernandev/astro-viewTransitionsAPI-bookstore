@@ -1,54 +1,21 @@
-# Astro Starter Kit: Basics
+# Proyecto ejemplificación de [Repo](https://github.com/nkwaaaa/ViewTransitionsAPI.git)
 
-```
-npm create astro@latest -- --template basics
-```
+[DOCUMENTACIÓN](https://developer.chrome.com/docs/web-platform/view-transitions/)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+[Potencial](https://twitter.com/charca/status/1637832314364497920)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+# API de transiciones de vista (View Transitions API)
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+La API de transiciones de vista (View Transitions API) es una herramienta que permite actualizar el DOM en un solo paso mientras se genera una transición animada entre dos estados. Esta característica **está disponible en Chrome 111+** y actualmente está en versión beta.
 
-## 🚀 Project Structure
+## ¿Por qué necesitamos esta función?
 
-Inside of your Astro project, you'll see the following folders and files:
+Las transiciones de página no solo se ven geniales, sino que también comunican la dirección del flujo y hacen que quede claro qué elementos están relacionados de página a página. Incluso pueden ocurrir durante la búsqueda de datos, lo que lleva a una percepción más rápida del rendimiento.
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Sin embargo, ya tenemos herramientas de animación en la web, como las transiciones CSS, las animaciones CSS y la API Web Animation. Entonces ¿por qué necesitamos algo nuevo para mover cosas? La verdad es que las transiciones entre estados son difíciles incluso con las herramientas que ya tenemos. Incluso algo como un simple cross-fade implica que ambos estados estén presentes al mismo tiempo. Esto presenta desafíos de usabilidad.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Las transiciones de vista te brindan una forma más fácil al permitirte realizar cambios en el DOM sin superposición entre estados y crear una animación de transición entre los estados utilizando vistas instantáneas.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Estado de estandarización
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+La función se está desarrollando dentro del Grupo de Trabajo CSS del W3C como una especificación preliminar. Una vez que estemos satisfechos con el diseño del API, comenzaremos los procesos y controles necesarios para enviar esta función a estable.
