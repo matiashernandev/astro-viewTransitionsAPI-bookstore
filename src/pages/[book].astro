@@ -2,6 +2,15 @@
 import Layout from "../layouts/Layout.astro"
 import { books } from "../data/books"
 
+export function getStaticPaths() {
+  return [
+    { params: { book: "clean-code" } },
+    { params: { book: "the-clean-coder" } },
+    { params: { book: "javascript-the-good-parts" } },
+    { params: { book: "eloquent-javascript" } },
+  ]
+}
+
 const { book } = Astro.params
 
 const info = books.find((b) => b.id === book)
